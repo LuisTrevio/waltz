@@ -1,0 +1,164 @@
+---
+import Headerx from '../items/header.astro';
+import Herox from '../items/hero.astro';
+import Itemx from '../items/item.astro';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Waltz - Mi perfil</title>
+	</head>
+
+	<style>	
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+}
+
+*,::after, ::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-smooth: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+body {
+	background-color: var(--bg);
+	line-height: 1.5;
+}
+
+br {
+	user-select: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 425ms ease-out;
+    filter: blur(2px);
+}
+
+@media(prefers-reduce-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+    transform: translate(0,0);
+    filter: blur(0);
+}
+
+@media (max-width:780px) {
+	body::-webkit-scrollbar {
+		display: none;
+	}
+
+	.scroll-frost {
+		overflow: hidden;
+	}
+}
+
+:root {
+	--bg: rgb(198, 210, 214);
+	--bg-transparente: rgba(169, 177, 185, 0.712);
+	--bg-menu: rgba(169, 177, 185, 0.712);
+
+	--hover: rgb(209, 234, 243);
+	--bar: rgb(28, 31, 32);
+
+	--white: rgb(14, 14, 15);
+	--white-btn: rgb(214, 214, 214);
+
+    --nuc: rgb(73, 84, 187);
+    --nucl: rgb(99, 144, 241);
+	--shadow-color: 196deg 9% 50%;
+	--shadow-elevation-low:
+    0px 0.2px 0.2px hsl(var(--shadow-color) / 0.34),
+    0px 0.3px 0.3px -1.2px hsl(var(--shadow-color) / 0.34),
+    0px 0.7px 0.8px -2.5px hsl(var(--shadow-color) / 0.34);
+  	--shadow-elevation-medium:
+    0px 0.2px 0.2px hsl(var(--shadow-color) / 0.36),
+    0px 0.5px 0.6px -0.8px hsl(var(--shadow-color) / 0.36),
+    0px 1.4px 1.6px -1.7px hsl(var(--shadow-color) / 0.36),
+    0px 3.3px 3.7px -2.5px hsl(var(--shadow-color) / 0.36);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #3c3a47;
+		--bg-transparente: rgba(67, 67, 82, 0.699);
+		--bg-menu: rgba(60, 58, 71, 0.884);
+
+		--hover: rgb(104, 101, 122);
+		--bar: rgb(91, 88, 107);
+
+		--white: rgb(214, 214, 214);
+		--white-btn: rgb(214, 214, 214);
+
+		--nuc: rgb(122, 73, 187);
+		--nucl: rgb(161, 99, 241);
+
+		--shadow-color: 250deg 15% 13%;
+		--shadow-elevation-low:
+		0px 0.2px 0.2px hsl(var(--shadow-color) / 0.34),
+		0px 0.3px 0.3px -1.2px hsl(var(--shadow-color) / 0.34),
+		0px 0.7px 0.8px -2.5px hsl(var(--shadow-color) / 0.34);
+		--shadow-elevation-medium:
+		0px 0.2px 0.2px hsl(var(--shadow-color) / 0.36),
+		0px 0.5px 0.6px -0.8px hsl(var(--shadow-color) / 0.36),
+		0px 1.4px 1.6px -1.7px hsl(var(--shadow-color) / 0.36),
+		0px 3.3px 3.7px -2.5px hsl(var(--shadow-color) / 0.36);
+	}
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background: var(--bg);
+	transition: all 0.24s ease-in-out;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 2px solid var(--bg);
+    background: var(--bar);
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 1px;
+    background: none;
+}
+
+	</style>
+
+	<body class="scr-fr">
+		<Headerx/>
+		<Herox/>
+		<Itemx/>
+	</body>
+</html>

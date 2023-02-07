@@ -1,0 +1,168 @@
+<div class="item">
+    <div class="intro-item">
+    <h1 >Mis items de programacion</h1>
+
+    <div class="three-item-box">
+        <div class="box-item">
+            <div class="imagen-item hidden">
+                <div class="html svg " title="HTML5"></div>
+                <div class="css svg" title="CSS3"></div>
+                <div class="js svg" title="Javascript"></div>
+            </div>
+            <div class= "item-text">
+                <h2>Desarrollo Web y Diseño</h2>
+                Descripcion breve.
+            </div>
+        </div>
+        <div class="box-item">
+            <div class="imagen-item">
+                <div class="vs svg" title="Visual Studios Code"></div>
+                <div class="gh svg" title="Github"></div>
+                <div class="fig svg" title="Figma"></div>
+            </div>
+            <div class= "item-text">
+                <h2>Herramientas y medios de desarrollos</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quibusdam sit aliquid eveniet est officiis in ipsum autem commodi officia unde labore doloribus, explicabo nihil deserunt, libero voluptatibus id magnam?
+            </div>
+        </div>
+        <div class="box-item">
+            <div class="imagen-item">
+                <div class="py svg" title="Python"></div>
+                <div class="sql svg" title="MySQL"></div>
+                <div class="js svg" title="Javascript (con medio de Node.js)"></div>
+                
+            </div>
+            <div class= "item-text">
+                <h2>Programacion</h2>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem necessitatibus rem alias, sint amet nulla nostrum nesciunt assumenda reiciendis at possimus quos voluptates eius similique eaque eum. Eum, exercitationem dignissimos?
+            </div>
+        </div>
+
+    </div>
+    </div>
+</div>
+
+<style>
+    .item {
+        width: 100%;
+        height: 100vh;
+
+        max-width: 1130px;
+
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    @media (max-width: 780px) {
+        .item {
+            height: auto;
+        }
+    }
+
+    h1 {
+        font-size: 50px;
+        font-family: 'Palanquin Dark', sans-serif;
+        color: var(--white);
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 25px;
+        font-family: 'Palanquin Dark', sans-serif;
+        color: var(--white);
+        line-height: 1.2;
+    }
+
+    .intro-item {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Quicksand', sans-serif;
+        color: var(--white);
+        padding: 30px;
+    }
+
+    .three-item-box {
+        width:100%;
+        height: auto;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    @media (max-width:780px) {
+        .three-item-box {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .box-item {
+        width: 100%;
+        height: auto;
+
+        background: var(--bg-transparente);
+        border-radius: 20px;
+        
+    }
+
+    .item-text {
+        padding: 0 20px 20px 20px;
+    }
+
+    .imagen-item {
+        width: auto;
+        height: 48px;
+
+        padding: 20px 0 0px 20px;
+
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+
+        gap: 15px;
+    }
+
+    .svg {
+        width: 40px;
+        height:40px;
+
+        background-size: 100% 100%;
+        background-position: center;
+
+        background-repeat: no-repeat;
+        transition: 0.2s all ease-out;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .svg {
+            filter: invert(1);
+        }
+    }
+
+    .html {
+        background-image: url(../img/html.svg);
+    }
+    .css {
+        background-image: url(../img/css3.svg);
+    }
+    .js {
+        background-image: url(../img/js.svg);
+    }
+    .py {
+        background-image: url(../img/py.svg);
+    }
+    .sql {
+        background-image: url(../img/sql.svg);
+    }
+    .vs {
+        background-image: url(../img/vscode.svg);
+    }
+    .gh {
+        background-image: url(../img/gh.svg);
+    }
+    .fig {
+        background-image: url(../img/fig.svg);
+    }
+</style>

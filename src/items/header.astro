@@ -1,0 +1,230 @@
+<script>
+    const buttons = document.querySelectorAll('button.menu');
+    buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+		document.querySelectorAll('.br-1').forEach((result) => {result.classList.toggle('bar1-on');})
+		document.querySelectorAll('.br-2').forEach((result) => {result.classList.toggle('bar2-on');})
+		document.querySelectorAll('.br-3').forEach((result) => {result.classList.toggle('bar3-on');})
+        document.querySelectorAll('.menu-on').forEach((result) => {result.classList.toggle('menu-full-on');})
+        document.querySelectorAll('.scr-fr').forEach((result) => {result.classList.toggle('scroll-frost');})
+        document.querySelectorAll('.link-on').forEach((result) => {result.classList.toggle('link-visible');})
+        document.querySelectorAll('.bg-on').forEach((result) => {result.classList.toggle('header-bg');})
+        });
+	});
+</script>
+
+<header class="bg-on">
+    <div class="header-max">
+        <button class="menu">
+            <span class="br-1 bar-1"></span>
+            <span class="bar-2 br-2"></span>
+            <span class="bar-3 br-3"></span>
+        </button>
+        
+        <div class="logo">Waltz</div>
+
+        <div class="menu">
+        </div>
+    </div>
+</header>
+
+<div class="menu-screen menu-on">
+    <div class="menu-links-exe">
+        <div class="link link-on"><a class="link-menu" href="/">Novedades</a></div>
+        <div class="link link-on"><a class="link-menu" href="/">Proyectos</a></div>
+        <div class="link link-on"><a class="link-menu" href="/">Acerca de mi</a></div>
+    </div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
+
+    header {
+        width: 100%;
+        height: 60px;
+
+        position: fixed;
+        background-color: var(--bg);
+        box-shadow: var(--shadow-elevation-medium);
+
+        z-index: 3;
+        transition: 0.2s ease-out;
+    }
+
+    .header-max {
+        width: 100%;
+        height: 60px;
+
+        /*max-width: 1441px;*/
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        justify-content: space-between;
+
+        padding-left: 30px;
+    }
+
+    .header-bg {
+        background-color: var(--bg-menu);
+        box-shadow: none;
+
+        z-index: 3;
+    }
+
+    @media (max-width:780px) {
+        header, .header-max {
+            height: 50px;
+            padding-left: 0px;
+        }
+    }
+
+    button {
+        background: none;
+        font: inherit;
+        border: none;
+    }
+
+    .menu {
+        width: 50px;
+        height: 50px;
+
+        display: none;
+
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+
+        transition: 0.2s ease-out;
+
+        cursor: pointer;
+    }
+
+    @media (max-width:780px) {
+        .menu {
+            display: flex;
+        }
+    }
+
+    .bar-1, .bar-2, .bar-3 {
+        width: 23px;
+        height: 2px;
+
+        border-radius: 20px;
+
+        background: var(--white);
+        transition: all 0.2s ease-out;
+    }
+
+    .logo {
+        width: fit-content;
+        height: 100%;
+
+        color: var(--white);
+
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 22px;
+
+        display: flex;
+        align-items: center;
+
+        user-select: none;
+        cursor: pointer;
+
+        padding-top: 2px;
+    }
+
+    .bar1-on {
+        position: fixed;
+        transform: rotate(-46deg);
+    }
+
+    .bar2-on {
+        opacity: 0;
+    }
+
+    .bar3-on {
+        position: fixed;
+        transform: rotate(44deg);
+    }
+
+    .menu-screen {
+        width: 100%;
+        height: 100%;
+
+        position: fixed;
+
+        z-index: 2;
+        background-color: none;
+
+        pointer-events: none;
+        display: none;
+
+        transition: all 0.2s ease-out;
+    }
+
+    .menu-full-on {
+        background-color: var(--bg-menu);
+        backdrop-filter: blur(5px);
+        pointer-events: all;
+    }
+
+    @media (max-width:780px) {
+        .menu-screen {
+            display: flex;
+        }
+    }
+
+    .menu-links-exe {
+        display: flex;
+
+        font-size: 40px;
+        font-family: 'Palanquin Dark', sans-serif;
+        line-height: 1.2;
+
+        flex-direction: column;
+
+        padding: 90px 30px 0 30px;
+
+        gap: 30px;
+    }
+
+    .link {
+        opacity: 0;
+        transition: 0.197s ease-out;
+        transform: translate(50px,0);
+
+        pointer-events: none;
+    }
+
+    .link-visible {
+        pointer-events: all;
+        opacity: 1;
+
+        transform: translate(0,0);      
+    }
+
+    .link-visible:nth-child(1) {
+        transition-delay: 300ms;
+    }
+
+    .link-visible:nth-child(2) {
+        transition-delay: 450ms;
+    }
+
+    .link-visible:nth-child(3) {
+        transition-delay: 600ms;
+    }
+
+    .link-menu {
+        color: var(--white);
+        text-decoration: none;
+        transition: all 0.2s ease-out;
+    }
+
+    .link-menu:hover {
+        color: var(--hover);
+    }
+</style>
